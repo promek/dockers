@@ -1,13 +1,15 @@
 # promek/deployd
 
+github : https://github.com/promek/dockers/tree/master/deployd
+
 An alpine image with Deployd 
 
 ## Environment Variables
 
- -- Deployd Modules : dpd-count,dpd-fileupload,dpd-event
+-- Deployd Modules : dpd-count,dpd-fileupload,dpd-event
 * **DPD_MODS:** (default : dpd-count)
- 
- -- mongo 
+
+-- mongo
 
 * **MNG_HOST:** (default : 172.17.0.3)
 * **MNG_PORT:** (default : 27017)
