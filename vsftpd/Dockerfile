@@ -16,7 +16,8 @@ COPY vsftpd.user_list /etc/vsftpd.user_list
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
 
-VOLUME /home/${FTP_USER}
+VOLUME /home/files
+
 EXPOSE 20 21
 
 CMD /entrypoint.sh
