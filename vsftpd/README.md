@@ -19,6 +19,6 @@ docker run -d --name vsftp \
     -e FTP_USER=ftpuser \
     -e FTP_PASS=secret-passwd \
     -v /path/to/data:/home \
-    -p 20-21:20-21 \
+    -p 20-21:20-21 -p 50000-50020:50000-50020 \
     promek/vsftpd
 ```

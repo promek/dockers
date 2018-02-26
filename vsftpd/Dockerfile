@@ -18,6 +18,6 @@ RUN chmod +x entrypoint.sh
 
 VOLUME /home
 
-EXPOSE 20-21
+EXPOSE 20-21 50000-50020
 
 CMD /entrypoint.sh
