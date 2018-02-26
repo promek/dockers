@@ -16,9 +16,9 @@ An alpine:3.7 image with vsftpd.
 docker pull promek/vsftpd
 
 docker run -d --name vsftp \
-    -e FTP_USER="ftpuser" \
-    -e FTP_PASS="secret-passwd" \
-    -v /path/to/data:/home/files \
+    -e FTP_USER=ftpuser \
+    -e FTP_PASS=secret-passwd \
+    -v /path/to/data:/home \
     -p 20-21:20-21 \
     promek/vsftpd
 ```
