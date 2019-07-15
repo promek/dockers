@@ -8,11 +8,11 @@ An alpine image with Ghost
 
 -----------------------
 ```bash
-docker pull promek/ghost:1.22.5
+docker pull promek/ghost:1.24.1
 
 docker run -d --name ght \
     -v /path/to/data:/var/lib/ghost/content \
     -p "80:2368" \
-    promek/ghost:1.22.5
+    promek/ghost:1.24.1
 ```
 
