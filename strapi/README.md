@@ -1,4 +1,4 @@
-# promek/django
+# promek/strapi
 
 github : https://github.com/promek/dockers/tree/master/strapi
 
