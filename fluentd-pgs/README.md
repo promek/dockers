@@ -16,8 +16,11 @@ docker run -d --name flttest \
     -v /path/to/log:/fluentd/log \
     promek/fluentd-pgs
 ```
+-----------------------
 
 $ vi /path/to/etc/fluent.conf
+
+```bash
 <source>
   @type http
   tag restpgs
@@ -27,7 +30,7 @@ $ vi /path/to/etc/fluent.conf
   keepalive_timeout 10s
   <parse>
     @type "regexp"
-    expression /=(?<body>\S+)&([^=]+)=(?<subject>\S+)/
+    expression /=(?<body>\S+)&([^=]+)=(?<hostname>\S+)&([^=]+)=(?<subject>\S+)/
   </parse>
 </source>
 
@@ -37,7 +40,8 @@ $ vi /path/to/etc/fluent.conf
   database postgre_dbn
   username postgre_usr
   password secretpassw
-  key_names field1,field2
-  sql INSERT INTO notify (field1,field2) VALUES ($1,$2)
+  key_names hostname,subject,body
+  sql INSERT INTO notify (hostname,subject,body) VALUES ($1,$2,$3)
   flush_intervals 5s
 </match>
+```
